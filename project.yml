@@ -1,0 +1,26 @@
+name: ThriftFeed
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "16.0"
+packages:
+  ThriftFeedCore:
+    path: .
+targets:
+  ThriftFeed:
+    type: application
+    platform: iOS
+    sources:
+      - App
+    dependencies:
+      - package: ThriftFeedCore
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: ThriftFeed
+        UILaunchScreen: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.thriftfeed
+        SWIFT_VERSION: "5.9"
+        GENERATE_INFOPLIST_FILE: NO
